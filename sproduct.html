@@ -62,7 +62,13 @@
             <option value="small">Small</option>
             <option value="large">Large</option>
         </select>
-        <input  id="proQuantity" type="number" value="1" min="1" max="10">
+        <!--<input  id="proQuantity" type="number" value="1" min="1" max="10"> -->
+        <div class="wrapper">
+          <span class="minus">-</span>
+          <span class="num">01</span>
+          <span class="plus">+</span>
+
+        </div>
         <button id="addToCart" class="normal">Add To Cart</button>
         <p id="fadeText" style=" font-weight:700;opacity:0">Item added to cart</p>
         <h4>Product Details</h4>
@@ -228,10 +234,10 @@
  <script>
      var MainImg=document.getElementById("MainImg");
      var smallImg=document.getElementsByClassName("small-img");
-     var quantityProducts=document.getElementById("proQuantity");
+     var quantityProducts=document.querySelector(".num");
 
      smallImg[0].onclick = function(){
-      quantityProducts.value=1;
+      quantityProducts.innerText='01';
        for(let i=0;i<smallImg.length;i++){
         smallImg[i].classList.remove('active');
        }
@@ -251,7 +257,7 @@
 
 
      smallImg[1].onclick = function(){
-      quantityProducts.value=1;
+      quantityProducts.innerText='01';
       for(let i=0;i<smallImg.length;i++){
         smallImg[i].classList.remove('active');
        }
@@ -270,7 +276,7 @@
 
 
      smallImg[2].onclick = function(){
-      quantityProducts.value=1;
+      quantityProducts.innerText='01';
       for(let i=0;i<smallImg.length;i++){
         smallImg[i].classList.remove('active');
        }
@@ -291,7 +297,7 @@
 
 
      smallImg[3].onclick = function(){
-      quantityProducts.value=1;
+      quantityProducts.innerText='01';
 
       for(let i=0;i<smallImg.length;i++){
         smallImg[i].classList.remove('active');
@@ -328,7 +334,7 @@ var addToCart=document.getElementById("addToCart");
    for(let i=0;i<index;i++){
        if(dressCode==productsInCart[i].dressCode){
          
-        productsInCart[i].proQuantity =document.getElementById("proQuantity").value;
+        productsInCart[i].proQuantity =document.querySelector(".num").innerText;
         var selectedSize  = document.getElementById("selectSize");
         productsInCart[i].proSize= selectedSize.options[selectedSize.selectedIndex].value;
         localStorage.proDetails=JSON.stringify(productsInCart);
@@ -341,7 +347,7 @@ var addToCart=document.getElementById("addToCart");
    var selectedSize  = document.getElementById("selectSize");
     li.proSize = selectedSize.options[selectedSize.selectedIndex].value;
     li.dressCode= document.getElementById("dressCode").innerHTML;
-    li.proQuantity= document.getElementById("proQuantity").value
+    li.proQuantity= document.querySelector(".num").innerText;
     li.imagePath=MainImg.src;
     productsInCart[index]=li;
     localStorage.setItem("proDetails", JSON.stringify(productsInCart));
@@ -380,7 +386,27 @@ function fadeOut() {
     }, 110);
 }
 
-   
+
+const plus = document.querySelector(".plus"), 
+    minus= document.querySelector(".minus"),
+    num= document.querySelector(".num");
+
+    let a=1;
+    plus.addEventListener("click",()=>{
+         a++;
+         a= (a<10)? "0"+a :a;
+         num.innerText=a;
+    });
+    minus.addEventListener("click",()=>{
+      if(a>1){
+        
+         
+         a--;
+         a= (a<10)? "0"+a :a;
+         num.innerText=a;
+      }
+    });
+
 
 
 
