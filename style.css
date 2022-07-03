@@ -648,7 +648,11 @@ footer .copyright{
 #prodetails .single-pro-details div span.plus{
     padding-top: 4px;
     font-size: 23px;
+    user-select: none;
     
+}
+#prodetails .single-pro-details div span.minus{
+    user-select: none;
 }
 
 #prodetails .single-pro-details input:focus{

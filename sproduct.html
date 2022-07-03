@@ -12,7 +12,7 @@
 
 <body>
   <section id="header">
-    <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+    <a href="index.html"><img src="img/logo.png" class="logo" alt=""></a>
     <div>
       <ul id="navbar">
         <li><a  href="index.html">Home</a></li>
@@ -391,13 +391,15 @@ const plus = document.querySelector(".plus"),
     minus= document.querySelector(".minus"),
     num= document.querySelector(".num");
 
-    let a=1;
+    
     plus.addEventListener("click",()=>{
+        let a= document.querySelector(".num").innerText;
          a++;
          a= (a<10)? "0"+a :a;
          num.innerText=a;
     });
     minus.addEventListener("click",()=>{
+      let a= document.querySelector(".num").innerText;
       if(a>1){
         
          

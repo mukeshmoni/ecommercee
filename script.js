@@ -29,8 +29,9 @@ if(localStorage.getItem("proDetails")){
     document.getElementById('cart-add').style.display="";
 }
 
+
 cartItems=JSON.parse(localStorage.getItem("proDetails"));
-if(Object.keys(cartItems).length==0){
+if(!localStorage.getItem("proDetails")){
     document.getElementById('empty-cart').style.display="";
     document.getElementById('cart').style.display="none";
     document.getElementById('cart-add').style.display="none";
@@ -39,7 +40,7 @@ if(Object.keys(cartItems).length==0){
 
 
 /* appending value to table data */
-
+if(localStorage.getItem("proDetails")){
 var objLen=Object.keys(cartItems).length;
 if(objLen>0){
 var table = document.createElement('table');
@@ -106,14 +107,17 @@ for(let i=0;i<objLen;i++){
    row.appendChild(data5);
    tbody.appendChild(row);
 };
+};
 
 
 
 
 /* remove function */
+
+
+function removeItems(dCode){
 const objectLength=Object.keys(cartItems).length;
 var deleted_index=0;
-function removeItems(dCode){
  for(let i=0;i<objectLength;i++){
     if(dCode==cartItems[i].dressCode){
         delete cartItems[i];
@@ -133,10 +137,12 @@ function removeItems(dCode){
 
 
 
+
 /* calculate total amount and applying coupon(discount)*/
-var proLength=Object.keys(cartItems).length;
+
 let discountAmount=0;
 function applyCoupon(){
+    var proLength=Object.keys(cartItems).length;
     if(proLength>0){
     var couponcode=document.getElementById("couponInput").value.toUpperCase();
     if(couponcode=="GOOD"){
