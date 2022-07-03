@@ -1,4 +1,8 @@
-window.onunload = function(){};
+$(window).bind("pageshow", function(event) {
+    if (event.originalEvent.persisted) {
+        window.location.reload(); 
+    }
+});
 /* nav bar */
 const bar= document.getElementById('bar');
 const nav=document.getElementById('navbar');
