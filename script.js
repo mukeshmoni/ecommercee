@@ -1,8 +1,3 @@
-$(window).bind("pageshow", function(event) {
-    if (event.originalEvent.persisted) {
-        window.location.reload(); 
-    }
-});
 /* nav bar */
 const bar= document.getElementById('bar');
 const nav=document.getElementById('navbar');
@@ -25,10 +20,10 @@ if(close){
 
 
 /* redirect to shop.html after checkout */
-if(localStorage.getItem("shopping")){
-    window.location.href='shop.html';
-    localStorage.clear();
-}
+// if(localStorage.getItem("shopping")){
+//     window.location.href='shop.html';
+//     localStorage.clear();
+// }
 
 /*check whether cart is empty or not */
 
