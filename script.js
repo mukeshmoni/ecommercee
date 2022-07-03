@@ -1,4 +1,4 @@
-
+window.onunload = function(){};
 /* nav bar */
 const bar= document.getElementById('bar');
 const nav=document.getElementById('navbar');
