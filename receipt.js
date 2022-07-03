@@ -77,5 +77,4 @@ document.getElementById("discountVar").innerHTML=discountAmount;
 
 document.getElementById("totalAmount").innerHTML=totalSum-discountAmount;
 window.print();
-localStorage.clear();
-window.onunload=function() {};
+
