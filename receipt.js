@@ -78,3 +78,4 @@ document.getElementById("discountVar").innerHTML=discountAmount;
 document.getElementById("totalAmount").innerHTML=totalSum-discountAmount;
 window.print();
 localStorage.clear();
+localStorage.setItem("shopping",'done');

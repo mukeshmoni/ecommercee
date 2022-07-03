@@ -20,6 +20,12 @@ if(close){
 /* navbar-end */
 
 
+/* redirect to shop.html after checkout */
+if(localStorage.getItem("shopping")){
+    window.location.href='shop.html';
+    localStorage.clear();
+}
+
 /*check whether cart is empty or not */
 
 if(localStorage.getItem("proDetails")){
@@ -145,12 +151,12 @@ function applyCoupon(){
     var proLength=Object.keys(cartItems).length;
     if(proLength>0){
     var couponcode=document.getElementById("couponInput").value.toUpperCase();
-    if(couponcode=="GOOD"){
+    if(couponcode=="ACCIOJOB"){
         discountAmount=totalSum;
         document.getElementById("couponInput").disabled = true;
         onloadChanges();
 
-    }else if(couponcode=="BAD"){
+    }else if(couponcode=="GET10"){
         discountAmount= parseInt((totalSum*10)/100);
         document.getElementById("couponInput").disabled = true;
         onloadChanges();
