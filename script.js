@@ -6,6 +6,8 @@ if(localStorage.getItem("proDetails") && Object.keys(InCartItems).length>0){
     document.getElementById("cartFill").style.display="none";
 }
 
+
+
 /* nav bar */
 const bar= document.getElementById('bar');
 const nav=document.getElementById('navbar');
