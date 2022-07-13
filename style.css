@@ -82,7 +82,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 20px 80px;
-    background-color: #E3E6F3;
+    background-color:#fff;
     box-shadow: 0 5px 29px rgba(0, 0, 0, 0.06);
     z-index: 1;
     position: sticky;
@@ -137,19 +137,61 @@ body {
     display: none;
 }
 
+#lg-bag{
+    position: relative;
+}
+#cartFill{
+   
+    position: absolute;
+    right:19px;
+    top:11px;
+}
+
+/* timer */
+#timer{
+    margin-top: 0;
+    height: 6vh;
+    padding-top: 1px;
+    text-align: center;
+    background-image: linear-gradient(90deg,#f9f9ff,#dee8ff);;
+}
+
 /* Home page */
 #hero {
-    background-image: url("img/photo4.jpg");
-    height: 90vh;
+    transition: 0.9s ease;
+    background-image: url("img/hero1.webp"); 
+    height: 50vh;
     width: 100%;
     background-size: cover;
-    background-position: top 15% right 0;
+    background-position: top 0 right 0;
     padding: 0 80px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    cursor: pointer;
+    margin-top: 10px;
+    
 }
+#dotssection{
+    text-align: center;
+    margin-top: 13px;
+    
+}
+.dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+.activeslide, .dot:hover {
+    background-color: #717171;
+  }
 
 #hero h4 {
     padding-bottom: 15px;
@@ -182,15 +224,16 @@ body {
 #feature .fe-box {
     width: 180px;
     text-align: center;
-    padding: 25px 15px;
+    padding: 4px 10px;
     box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
     border: 1px solid #cce7d0;
     border-radius: 4px;
     margin: 15px 0;
+    cursor: pointer;
 }
 
 #feature .fe-box:hover {
-    box-shadow: 10px 10px 54px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -204,8 +247,9 @@ body {
 }
 
 #feature .fe-box img{
+    
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 #feature .fe-box:nth-child(2) h6{
     background-color:#cdebbc ;
@@ -222,6 +266,20 @@ body {
 #feature .fe-box:nth-child(6) h6{
     background-color:#fff2e5 ;
 }
+
+/*gift card */
+#giftcard{
+    display: flex;
+    flex-wrap: wrap;
+}
+#giftcard .gif-box{
+    width: 270px;
+    
+}
+#giftcard .gif-box img{
+    width: 100%;
+}
+
 
 /* products css */
 #product1{
@@ -253,6 +311,7 @@ body {
 #product1 .pro img{
     width: 100%;
     border-radius: 20px;
+    
 }
 #product1 .pro .des{
     text-align: start;
