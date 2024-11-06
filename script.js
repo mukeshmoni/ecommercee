@@ -99,17 +99,17 @@ function currentSlide(n) {
     if(n==1){
         let slide1=document.getElementById("slide1");
         slide1.classList.add("activeslide");
-        document.getElementById('hero').style.backgroundImage = "url('img/hero1.webp')";
+        document.getElementById('hero').style.backgroundImage = "url('img/hero1.jpg')";
       }
       if(n==2){
         let slide2=document.getElementById("slide2");
         slide2.classList.add("activeslide");
-        document.getElementById('hero').style.backgroundImage = "url('img/hero2.webp')";
+        document.getElementById('hero').style.backgroundImage = "url('img/hero2.jpg')";
       }
       if(n==3){
         let slide3=document.getElementById("slide3");
         slide3.classList.add("activeslide");
-        document.getElementById('hero').style.backgroundImage = "url('img/hero3.webp')";
+        document.getElementById('hero').style.backgroundImage = "url('img/hero3.jpg')";
       }
       slideIndex=n;
 
@@ -126,17 +126,17 @@ function showSlides() {
   if(slideIndex==1){
     let slide1=document.getElementById("slide1");
     slide1.classList.add("activeslide");
-    document.getElementById('hero').style.backgroundImage = "url('img/hero1.webp')";
+    document.getElementById('hero').style.backgroundImage = "url('img/hero1.jpg')";
   }
   if(slideIndex==2){
     let slide2=document.getElementById("slide2");
     slide2.classList.add("activeslide");
-    document.getElementById('hero').style.backgroundImage = "url('img/hero2.webp')";
+    document.getElementById('hero').style.backgroundImage = "url('img/hero2.jpg')";
   }
   if(slideIndex==3){
     let slide3=document.getElementById("slide3");
     slide3.classList.add("activeslide");
-    document.getElementById('hero').style.backgroundImage = "url('img/hero3.webp')";
+    document.getElementById('hero').style.backgroundImage = "url('img/hero3.jpg')";
   }
   if(slideIndex>3){
     slideIndex=1;

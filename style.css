@@ -159,8 +159,8 @@ body {
 /* Home page */
 #hero {
     transition: 0.9s ease;
-    background-image: url("img/hero1.webp"); 
-    height: 50vh;
+    background-image: url("img/hero1.jpg"); 
+    height: 100vh;
     width: 100%;
     background-size: cover;
     background-position: top 0 right 0;
