@@ -453,9 +453,9 @@ body {
     padding: 20px;
     margin-bottom: 20px;
 }
-#banner3 .banner-box2{
+/* #banner3 .banner-box2{
     background-image: url("img/banner/b4.jpg");
-}
+} */
 #banner3 .banner-box3{
     background-image: url("img/banner/b18.jpg");
 }
@@ -469,6 +469,7 @@ body {
     color: #ec544e;
     font-weight: 800;
     font-size: 15px;
+
 }
 
 
@@ -1471,3 +1472,7 @@ footer{
 
    
 }
+.logo {
+    width: 50%;  /* Adjust the percentage to change the size */
+    height: auto; /* Maintain aspect ratio */
+  }

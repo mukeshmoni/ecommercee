@@ -46,7 +46,7 @@ for(let i=0;i<objLen;i++){
   
 
    var data1=document.createElement('td');
-   data1.innerHTML=`<img src='${cartItems[i].imagePath}' alt=''/>`;
+   data1.innerHTML=`<img src='₹{cartItems[i].imagePath}' alt=''/>`;
 
    var data2=document.createElement('td');
    data2.innerHTML=cartItems[i].proName;

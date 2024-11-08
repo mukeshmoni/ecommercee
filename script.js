@@ -214,10 +214,10 @@ for(let i=0;i<objLen;i++){
    var row=document.createElement('tr') ;
    
    var data0=document.createElement('td');
-   data0.innerHTML=`<button style="border: none; background: #fff; cursor: pointer;" onclick="removeItems(${cartItems[i].dressCode})"><i class="far fa-times-circle"></i></button>`;
+   data0.innerHTML=`<button style="border: none; background: #fff; cursor: pointer;" onclick="removeItems(₹{cartItems[i].dressCode})"><i class="far fa-times-circle"></i></button>`;
 
    var data1=document.createElement('td');
-   data1.innerHTML=`<img src='${cartItems[i].imagePath}' alt=''/>`;
+   data1.innerHTML=`<img src='₹{cartItems[i].imagePath}' alt=''/>`;
 
    var data2=document.createElement('td');
    data2.innerHTML=cartItems[i].proName;
@@ -310,7 +310,7 @@ function sendMail(){
     if(newsMail==""){
         alert("please enter your mail");
     }else{
-        alert(`Thanks for subscribing ${newsMail}`);
+        alert(`Thanks for subscribing ₹{newsMail}`);
     }
 }
 
@@ -322,7 +322,7 @@ function formSubmit(){
     if(formName=="" || formMessage=="" || formMail=="" || formSubject==""){
         alert("fields cannot be empty");
     }else{
-        alert(`Name: ${formName}\nMail Id: ${formMail}\nSubject: ${formSubject}\nMessage: ${formMessage}`);
+        alert(`Name: ₹{formName}\nMail Id: ₹{formMail}\nSubject: ₹{formSubject}\nMessage: ₹{formMessage}`);
     }
 
 }
